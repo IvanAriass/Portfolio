@@ -13,7 +13,11 @@ const CATEGORY_ORDER: SkillCategory[] = [
   'languages',
 ]
 
-export function SkillsSection() {
+interface SkillsSectionProps {
+  muted?: boolean
+}
+
+export function SkillsSection({ muted }: SkillsSectionProps) {
   const { t } = useTranslation()
 
   const grouped = CATEGORY_ORDER.map((category) => ({
@@ -23,7 +27,7 @@ export function SkillsSection() {
   })).filter((g) => g.items.length > 0)
 
   return (
-    <Section id="skills" title={t('skills.title')}>
+    <Section id="skills" title={t('skills.title')} muted={muted}>
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {grouped.map((group) => (
           <div key={group.category}>

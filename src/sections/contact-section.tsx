@@ -2,7 +2,11 @@ import { useTranslation } from 'react-i18next'
 import { Section } from '@/components/ui/section'
 import { Button } from '@/components/ui/button'
 
-export function ContactSection() {
+interface ContactSectionProps {
+  muted?: boolean
+}
+
+export function ContactSection({ muted }: ContactSectionProps) {
   const { t } = useTranslation()
 
   return (
@@ -10,6 +14,7 @@ export function ContactSection() {
       id="contact"
       title={t('contact.title')}
       subtitle={t('contact.subtitle')}
+      muted={muted}
     >
       <div className="mx-auto max-w-xl">
         <form

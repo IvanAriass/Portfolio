@@ -5,12 +5,16 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { projects } from '@/data/projects'
 
-export function ProjectsSection() {
+interface ProjectsSectionProps {
+  muted?: boolean
+}
+
+export function ProjectsSection({ muted }: ProjectsSectionProps) {
   const { t } = useTranslation()
 
   if (projects.length === 0) {
     return (
-      <Section id="projects" title={t('projects.title')}>
+      <Section id="projects" title={t('projects.title')} muted={muted}>
         <p className="text-center text-neutral-500 dark:text-neutral-400">
           {t('projects.no_projects')}
         </p>
@@ -19,7 +23,7 @@ export function ProjectsSection() {
   }
 
   return (
-    <Section id="projects" title={t('projects.title')}>
+    <Section id="projects" title={t('projects.title')} muted={muted}>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
           <Card key={project.id} hover className="flex flex-col">

@@ -2,11 +2,15 @@ import { Button } from '@/components/ui/button'
 import { Section } from '@/components/ui/section'
 import { useTranslation } from 'react-i18next'
 
-export function AboutSection() {
+interface AboutSectionProps {
+  muted?: boolean
+}
+
+export function AboutSection({ muted }: AboutSectionProps) {
   const { t } = useTranslation()
 
   return (
-    <Section id="about" title={t('about.title')}>
+    <Section id="about" title={t('about.title')} muted={muted}>
       <div className="mx-auto max-w-3xl text-center">
         <p className="text-lg leading-relaxed text-neutral-600 dark:text-neutral-300">
           {t('about.description')}

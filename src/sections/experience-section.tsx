@@ -4,14 +4,18 @@ import { Badge } from '@/components/ui/badge'
 import { experiences } from '@/data/experience'
 import { cn } from '@/lib/utils'
 
-export function ExperienceSection() {
+interface ExperienceSectionProps {
+  muted?: boolean
+}
+
+export function ExperienceSection({ muted }: ExperienceSectionProps) {
   const { t } = useTranslation()
 
   const workExperiences = experiences.filter((exp) => exp.type === 'work')
   const educationExperiences = experiences.filter((exp) => exp.type === 'education')
 
   return (
-    <Section id="experience" title={t('experience.title')}>
+    <Section id="experience" title={t('experience.title')} muted={muted}>
       <div className="space-y-16">
         <TimelineGroup
           title={t('experience.work')}
