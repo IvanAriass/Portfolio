@@ -14,7 +14,7 @@ export function HeroSection() {
       </p>
 
       <h1 className="max-w-3xl text-4xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-5xl md:text-6xl">
-        Iván
+        Iván Arias
         <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-neutral-900 to-neutral-500 dark:from-white dark:to-neutral-400">
           {t('hero.role')}
         </span>
