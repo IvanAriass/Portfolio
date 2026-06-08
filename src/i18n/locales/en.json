@@ -1,0 +1,67 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "role": "Full Stack Developer",
+    "tagline": "Graduated in Web and Multiplatform Application Development",
+    "cta": "View projects",
+    "contact": "Get in touch"
+  },
+  "about": {
+    "title": "About me",
+    "description": "I'm a developer passionate about building web and mobile applications. I graduated in Web and Multiplatform Application Development, and since then I haven't stopped learning and building things that solve real problems.",
+    "download_cv": "Download CV"
+  },
+  "projects": {
+    "title": "Projects",
+    "view_project": "View project",
+    "view_code": "Code",
+    "no_projects": "Coming soon..."
+  },
+  "skills": {
+    "title": "Skills",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Databases",
+      "devops": "DevOps",
+      "tools": "Tools",
+      "languages": "Languages"
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "work": "Work",
+    "education": "Education",
+    "present": "Present"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Have a project in mind? Let's talk.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send message",
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "error": "There was an error sending your message. Please try again."
+  },
+  "footer": {
+    "copyright": "All rights reserved.",
+    "made_with": "Made with"
+  },
+  "theme": {
+    "light": "Light mode",
+    "dark": "Dark mode"
+  },
+  "language": {
+    "switch": "Change language"
+  }
+}

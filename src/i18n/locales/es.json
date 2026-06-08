@@ -1,0 +1,67 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "skills": "Habilidades",
+    "experience": "Experiencia",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "role": "Desarrollador Full Stack",
+    "tagline": "Graduado en Desarrollo de Aplicaciones Web y Multiplataforma",
+    "cta": "Ver proyectos",
+    "contact": "Contactar"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "description": "Soy un desarrollador apasionado por crear aplicaciones web y móviles. Me gradué en Desarrollo de Aplicaciones Web y Multiplataforma, y desde entonces no he parado de aprender y construir cosas que resuelvan problemas reales.",
+    "download_cv": "Descargar CV"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "view_project": "Ver proyecto",
+    "view_code": "Código",
+    "no_projects": "Próximamente..."
+  },
+  "skills": {
+    "title": "Habilidades",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Bases de Datos",
+      "devops": "DevOps",
+      "tools": "Herramientas",
+      "languages": "Lenguajes"
+    }
+  },
+  "experience": {
+    "title": "Experiencia",
+    "work": "Trabajo",
+    "education": "Educación",
+    "present": "Actualidad"
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "¿Tienes un proyecto en mente? Hablemos.",
+    "name": "Nombre",
+    "email": "Email",
+    "message": "Mensaje",
+    "send": "Enviar mensaje",
+    "sending": "Enviando...",
+    "success": "¡Mensaje enviado correctamente!",
+    "error": "Hubo un error al enviar el mensaje. Inténtalo de nuevo."
+  },
+  "footer": {
+    "copyright": "Todos los derechos reservados.",
+    "made_with": "Hecho con"
+  },
+  "theme": {
+    "light": "Modo claro",
+    "dark": "Modo oscuro"
+  },
+  "language": {
+    "switch": "Cambiar idioma"
+  }
+}
