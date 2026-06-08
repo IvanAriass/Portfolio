@@ -1,5 +1,6 @@
 import type { HTMLAttributes } from 'react'
 import { cn } from '@/lib/utils'
+import { Reveal } from '@/components/ui/reveal'
 
 interface SectionProps extends HTMLAttributes<HTMLElement> {
   id: string
@@ -25,18 +26,20 @@ export function Section({ id, title, subtitle, muted, separator = 'default', cla
     >
       <div className="mx-auto max-w-5xl">
         {title && (
-          <div className="mb-12 text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-4xl">
-              {title}
-            </h2>
-            {subtitle && (
-              <p className="mt-3 text-lg text-neutral-500 dark:text-neutral-400">
-                {subtitle}
-              </p>
-            )}
-          </div>
+          <Reveal>
+            <div className="mb-12 text-center">
+              <h2 className="text-3xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-4xl">
+                {title}
+              </h2>
+              {subtitle && (
+                <p className="mt-3 text-lg text-neutral-500 dark:text-neutral-400">
+                  {subtitle}
+                </p>
+              )}
+            </div>
+          </Reveal>
         )}
-        {children}
+        <Reveal delay={0.15}>{children}</Reveal>
       </div>
     </section>
   )

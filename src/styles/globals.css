@@ -9,6 +9,33 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+html.disable-transition,
+html.disable-transition *,
+html.disable-transition *::before,
+html.disable-transition *::after {
+  transition-property: none !important;
+  transition-duration: 0s !important;
+}
+
+*, *::before, *::after {
+  transition-property: background-color, color, border-color, fill, stroke, box-shadow;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-property: none !important;
+    transition-duration: 0s !important;
+    animation-duration: 0.01ms !important;
+  }
 }
 
 body {

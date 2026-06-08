@@ -1,8 +1,10 @@
+import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { Section } from '@/components/ui/section'
 import { Badge } from '@/components/ui/badge'
 import { experiences } from '@/data/experience'
 import { cn } from '@/lib/utils'
+import { staggerContainer, staggerItem } from '@/lib/animations'
 
 interface ExperienceSectionProps {
   muted?: boolean
@@ -72,9 +74,15 @@ function TimelineGroup({ title, items, accentColor, icon }: TimelineGroupProps) 
       <div className="relative mx-auto max-w-3xl">
         <div className={cn('absolute left-4 top-0 h-full w-px', lineColor)} />
 
-        <div className="space-y-12">
+        <motion.div
+          className="space-y-12"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-50px' }}
+        >
           {items.map((exp) => (
-            <div key={exp.id} className="relative pl-12">
+            <motion.div key={exp.id} variants={staggerItem} className="relative pl-12">
               <div className={cn('absolute left-2.5 top-1.5 h-3 w-3 rounded-full border-2 bg-white dark:bg-neutral-950', dotBorder, dotBg)} />
 
               <div className="flex flex-wrap items-center gap-2 mb-1">
@@ -112,9 +120,9 @@ function TimelineGroup({ title, items, accentColor, icon }: TimelineGroupProps) 
                   ))}
                 </div>
               )}
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   )
