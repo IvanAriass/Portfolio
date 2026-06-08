@@ -34,9 +34,6 @@ export type SkillCategory =
 
 export interface Experience {
   id: string
-  role: string
-  company: string
-  description: string
   startDate: string
   endDate: string | null
   technologies: string[]

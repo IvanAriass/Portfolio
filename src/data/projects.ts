@@ -13,4 +13,16 @@ export const projects: Project[] = [
     featured: true,
     year: 2026,
   },
+  {
+    id: 'kebab',
+    title: 'Kebab',
+    description: '',
+    image: '/projects/kebab.png',
+    tags: ['Spring Boot', 'Java', 'MySQL', 'Docker'],
+    links: [
+      { label: 'Código', url: 'https://github.com/', type: 'github' },
+    ],
+    featured: true,
+    year: 2024,
+  },
 ]

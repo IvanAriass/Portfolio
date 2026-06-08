@@ -10,7 +10,7 @@ export function AboutSection({ muted }: AboutSectionProps) {
   const { t } = useTranslation()
 
   return (
-    <Section id="about" title={t('about.title')} muted={muted}>
+    <Section id="about" title={t('about.title')} muted={muted} separator="strong">
       <div className="mx-auto max-w-3xl text-center">
         <p className="text-lg leading-relaxed text-neutral-600 dark:text-neutral-300">
           {t('about.description')}

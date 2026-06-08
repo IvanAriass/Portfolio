@@ -94,18 +94,16 @@ function TimelineGroup({ title, items, accentColor, icon }: TimelineGroupProps) 
               </div>
 
               <h4 className="text-lg font-semibold text-neutral-900 dark:text-white">
-                {exp.role}
+                {t(`experience.items.${exp.id}.role`)}
               </h4>
 
               <p className="text-sm text-neutral-500 dark:text-neutral-400">
-                {exp.company}
+                {t(`experience.items.${exp.id}.company`)}
               </p>
 
-              {exp.description && (
-                <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-300">
-                  {exp.description}
-                </p>
-              )}
+              <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-300">
+                {t(`experience.items.${exp.id}.description`)}
+              </p>
 
               {exp.technologies.length > 0 && (
                 <div className="mt-3 flex flex-wrap gap-1.5">
