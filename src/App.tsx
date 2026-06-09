@@ -10,11 +10,11 @@ function App() {
   return (
     <Layout>
       <HeroSection />
-      <AboutSection />
-      <ProjectsSection muted />
-      <SkillsSection />
-      <ExperienceSection muted />
-      <ContactSection />
+      <AboutSection texture="dots" />
+      <ProjectsSection muted texture={['grid', 'noise']} />
+      <SkillsSection texture="noise" />
+      <ExperienceSection muted texture="grid" />
+      <ContactSection texture="noise" />
     </Layout>
   )
 }

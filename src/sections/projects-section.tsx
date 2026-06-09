@@ -6,17 +6,20 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { staggerContainer, staggerItem } from '@/lib/animations'
 import { projects } from '@/data/projects'
+import type { Texture, Gradient } from '@/components/ui/section'
 
 interface ProjectsSectionProps {
   muted?: boolean
+  texture?: Texture | Texture[]
+  gradient?: Gradient
 }
 
-export function ProjectsSection({ muted }: ProjectsSectionProps) {
+export function ProjectsSection({ muted, texture, gradient }: ProjectsSectionProps) {
   const { t } = useTranslation()
 
   if (projects.length === 0) {
     return (
-      <Section id="projects" title={t('projects.title')} muted={muted}>
+      <Section id="projects" title={t('projects.title')} muted={muted} texture={texture} gradient={gradient}>
         <p className="text-center text-neutral-500 dark:text-neutral-400">
           {t('projects.no_projects')}
         </p>
@@ -25,7 +28,7 @@ export function ProjectsSection({ muted }: ProjectsSectionProps) {
   }
 
   return (
-    <Section id="projects" title={t('projects.title')} muted={muted}>
+    <Section id="projects" title={t('projects.title')} muted={muted} texture={texture} gradient={gradient}>
       <motion.div
         className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
         variants={staggerContainer}

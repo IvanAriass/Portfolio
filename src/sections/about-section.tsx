@@ -4,15 +4,19 @@ import { Section } from '@/components/ui/section'
 import { useTranslation } from 'react-i18next'
 import { slideUp } from '@/lib/animations'
 
+import type { Texture, Gradient } from '@/components/ui/section'
+
 interface AboutSectionProps {
   muted?: boolean
+  texture?: Texture | Texture[]
+  gradient?: Gradient
 }
 
-export function AboutSection({ muted }: AboutSectionProps) {
+export function AboutSection({ muted, texture, gradient }: AboutSectionProps) {
   const { t } = useTranslation()
 
   return (
-    <Section id="about" title={t('about.title')} muted={muted} separator="strong">
+    <Section id="about" title={t('about.title')} muted={muted} texture={texture} gradient={gradient}>
       <motion.div
         className="mx-auto max-w-3xl text-center"
         variants={slideUp}
