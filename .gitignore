@@ -11,22 +11,29 @@ node_modules
 dist
 dist-ssr
 *.local
+*.tsbuildinfo
+.pnpm-store
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
 .idea
-.DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
 
-# TypeScript
-*.tsbuildinfo
+# OS files
+.DS_Store
+Thumbs.db
+*.lnk
+.directory
 
 # Environment variables
 .env
 .env.*
 !.env.example
+
+# Cache
+.cache

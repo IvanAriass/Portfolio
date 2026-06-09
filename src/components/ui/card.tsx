@@ -11,9 +11,11 @@ export function Card({ hover = false, className, children, ...props }: CardProps
   return (
     <motion.div
       variants={scaleIn}
+      whileHover={hover ? { y: -4 } : undefined}
+      transition={{ duration: 0.25, ease: 'easeOut' }}
       className={cn(
         'rounded-xl border border-neutral-200 bg-white p-6 dark:border-neutral-800 dark:bg-neutral-900',
-        hover && 'transition-all duration-200 hover:-translate-y-1 hover:shadow-lg',
+        hover && 'cursor-pointer transition-shadow duration-300 hover:shadow-lg dark:hover:shadow-neutral-900/50',
         className,
       )}
       {...(props as object)}
