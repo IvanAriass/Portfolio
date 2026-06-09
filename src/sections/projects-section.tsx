@@ -108,12 +108,6 @@ export function ProjectsSection({ muted, texture, gradient }: ProjectsSectionPro
                 </motion.p>
               )}
 
-              {project.description && (
-                <p className="mb-3 flex-1 text-sm text-neutral-500 dark:text-neutral-400">
-                  {project.description}
-                </p>
-              )}
-
               <motion.div
                 className="mb-3 flex flex-wrap gap-1.5"
                 initial={{ opacity: 0, y: 4 }}
@@ -185,15 +179,16 @@ export function ProjectsSection({ muted, texture, gradient }: ProjectsSectionPro
 
       <Modal open={selected != null} onClose={close}>
         {selected && (
-          <div className="grid md:grid-cols-5">
-            <div className="md:col-span-3">
+          <div className="flex min-h-0 flex-1 flex-col md:flex-row">
+            <div className="relative min-h-0 md:w-3/5">
               <Carousel
                 images={selected.images ?? [selected.image]}
                 alt={selected.title}
+                fill
               />
             </div>
 
-            <div className="flex flex-col p-6 md:col-span-2 md:p-8">
+            <div className="flex flex-col overflow-y-auto p-6 md:w-2/5 md:p-8">
               <div className="mb-1 flex items-center gap-3">
                 <h3 className="text-xl font-bold text-neutral-900 dark:text-white">
                   {selected.title}
@@ -242,9 +237,9 @@ export function ProjectsSection({ muted, texture, gradient }: ProjectsSectionPro
                 </div>
               )}
 
-              {selected.description && (
+              {t(`projects.descriptions.${selected.id}`, '') && (
                 <p className="mb-6 flex-1 text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
-                  {selected.description}
+                  {t(`projects.descriptions.${selected.id}`)}
                 </p>
               )}
 

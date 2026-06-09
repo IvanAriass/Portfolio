@@ -60,7 +60,7 @@ export function Modal({ open, onClose, children }: ModalProps) {
           />
 
           <motion.div
-            className="relative z-10 max-h-[90vh] w-full max-w-4xl overflow-y-auto rounded-2xl bg-white shadow-2xl dark:bg-neutral-900"
+            className="relative z-10 flex max-h-[90vh] w-full max-w-4xl flex-col overflow-hidden rounded-2xl bg-white shadow-2xl dark:bg-neutral-900"
             variants={modalVariants}
             initial="hidden"
             animate="visible"

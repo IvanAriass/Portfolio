@@ -17,14 +17,32 @@
   },
   "about": {
     "title": "Sobre mí",
-    "description": "Soy un desarrollador apasionado por crear aplicaciones web y móviles. Me gradué en Desarrollo de Aplicaciones Web y Multiplataforma, y desde entonces no he parado de aprender y construir cosas que resuelvan problemas reales.",
+    "bio": "Soy un desarrollador full stack con formación en Desarrollo de Aplicaciones Web y Multiplataforma. Mi enfoque está en crear soluciones completas que combinen un frontend intuitivo con un backend robusto, siempre priorizando el rendimiento y la experiencia de usuario.",
+    "detail": "Me apasiona aprender nuevas tecnologías y aplicarlas a problemas reales. He trabajado con Java, Spring Boot, Angular, React, TypeScript y múltiples bases de datos, tanto en proyectos académicos como personales. Actualmente busco oportunidades para seguir creciendo como desarrollador y aportar valor a proyectos desafiantes.",
+    "highlights": {
+      "experience": "Formación FP",
+      "projects": "Proyectos realizados",
+      "technologies": "Tecnologías"
+    },
+    "focus_title": "Áreas de enfoque",
+    "focus_items": {
+      "web": "Desarrollo Web Full Stack",
+      "mobile": "Aplicaciones Multiplataforma",
+      "backend": "Arquitectura Backend",
+      "ui": "Diseño de Interfaces"
+    },
     "download_cv": "Descargar CV"
   },
   "projects": {
     "title": "Proyectos",
     "view_project": "Ver proyecto",
     "view_code": "Código",
-    "no_projects": "Próximamente..."
+    "no_projects": "Próximamente...",
+    "descriptions": {
+      "voluntapp": "Plataforma de voluntariado que conecta organizaciones con voluntarios. Desarrollada con Spring Boot y Angular, incluye registro de usuarios, panel de administración y gestión de actividades con mapas interactivos.",
+      "ecoquest": "Aplicación de escritorio que gamifica la sostenibilidad mediante desafíos ecológicos. Desarrollada en WPF con C# y Spring Boot para el backend, permite completar misiones, ganar puntos y seguir el progreso ambiental.",
+      "kebab": "Sistema integral para la gestión de pedidos de un restaurante de kebab. Construido con Spring Boot y MySQL, ofrece catálogo de productos, carrito de compras y seguimiento de pedidos en tiempo real."
+    }
   },
   "skills": {
     "title": "Habilidades",
