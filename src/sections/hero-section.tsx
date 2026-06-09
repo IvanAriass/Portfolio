@@ -28,7 +28,7 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center px-4 text-center"
+      className="bg-hero-gradient bg-noise relative flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center px-4 text-center"
     >
       <motion.div
         variants={heroContainer}

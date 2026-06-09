@@ -3,12 +3,15 @@ import { useTranslation } from 'react-i18next'
 import { Section } from '@/components/ui/section'
 import { Button } from '@/components/ui/button'
 import { staggerContainer, staggerItem } from '@/lib/animations'
+import type { Texture, Gradient } from '@/components/ui/section'
 
 interface ContactSectionProps {
   muted?: boolean
+  texture?: Texture | Texture[]
+  gradient?: Gradient
 }
 
-export function ContactSection({ muted }: ContactSectionProps) {
+export function ContactSection({ muted, texture, gradient }: ContactSectionProps) {
   const { t } = useTranslation()
 
   return (
@@ -17,6 +20,8 @@ export function ContactSection({ muted }: ContactSectionProps) {
       title={t('contact.title')}
       subtitle={t('contact.subtitle')}
       muted={muted}
+      texture={texture}
+      gradient={gradient}
     >
       <div className="mx-auto max-w-xl">
         <motion.form

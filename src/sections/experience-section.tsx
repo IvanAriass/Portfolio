@@ -5,19 +5,22 @@ import { Badge } from '@/components/ui/badge'
 import { experiences } from '@/data/experience'
 import { cn } from '@/lib/utils'
 import { staggerContainer, staggerItem } from '@/lib/animations'
+import type { Texture, Gradient } from '@/components/ui/section'
 
 interface ExperienceSectionProps {
   muted?: boolean
+  texture?: Texture | Texture[]
+  gradient?: Gradient
 }
 
-export function ExperienceSection({ muted }: ExperienceSectionProps) {
+export function ExperienceSection({ muted, texture, gradient }: ExperienceSectionProps) {
   const { t } = useTranslation()
 
   const workExperiences = experiences.filter((exp) => exp.type === 'work')
   const educationExperiences = experiences.filter((exp) => exp.type === 'education')
 
   return (
-    <Section id="experience" title={t('experience.title')} muted={muted}>
+    <Section id="experience" title={t('experience.title')} muted={muted} texture={texture} gradient={gradient}>
       <div className="space-y-16">
         <TimelineGroup
           title={t('experience.work')}

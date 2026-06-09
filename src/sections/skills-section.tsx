@@ -5,6 +5,7 @@ import { skills } from '@/data/skills'
 import type { SkillCategory } from '@/types'
 import { cn } from '@/lib/utils'
 import { staggerContainer, staggerItem } from '@/lib/animations'
+import type { Texture, Gradient } from '@/components/ui/section'
 
 const CATEGORY_ORDER: SkillCategory[] = [
   'frontend',
@@ -17,9 +18,11 @@ const CATEGORY_ORDER: SkillCategory[] = [
 
 interface SkillsSectionProps {
   muted?: boolean
+  texture?: Texture | Texture[]
+  gradient?: Gradient
 }
 
-export function SkillsSection({ muted }: SkillsSectionProps) {
+export function SkillsSection({ muted, texture, gradient }: SkillsSectionProps) {
   const { t } = useTranslation()
 
   const grouped = CATEGORY_ORDER.map((category) => ({
@@ -29,7 +32,7 @@ export function SkillsSection({ muted }: SkillsSectionProps) {
   })).filter((g) => g.items.length > 0)
 
   return (
-    <Section id="skills" title={t('skills.title')} muted={muted}>
+    <Section id="skills" title={t('skills.title')} muted={muted} texture={texture} gradient={gradient}>
       <motion.div
         className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
         variants={staggerContainer}
