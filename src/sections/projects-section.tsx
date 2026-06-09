@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Modal } from '@/components/ui/modal'
 import { Carousel } from '@/components/ui/carousel'
+import { GitHubIcon } from '@/components/ui/icons'
 import { staggerContainer, staggerItem } from '@/lib/animations'
 import { projects } from '@/data/projects'
 import type { Project } from '@/types'
@@ -16,19 +17,6 @@ interface ProjectsSectionProps {
   muted?: boolean
   texture?: Texture | Texture[]
   gradient?: Gradient
-}
-
-function GitHubIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      className={className}
-      width="16"
-      height="16"
-      aria-hidden="true"
-    >
-      <use href="/icons.svg#github-icon" />
-    </svg>
-  )
 }
 
 export function ProjectsSection({ muted, texture, gradient }: ProjectsSectionProps) {

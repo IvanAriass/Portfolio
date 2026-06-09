@@ -3,6 +3,8 @@ import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Section } from '@/components/ui/section'
 import { Reveal } from '@/components/ui/reveal'
+import { GitHubIcon, LinkedInIcon } from '@/components/ui/icons'
+import cvUrl from '@/assets/cv.pdf?url'
 import { useTranslation } from 'react-i18next'
 import { staggerContainer, staggerItem } from '@/lib/animations'
 import { skills } from '@/data/skills'
@@ -113,7 +115,7 @@ export function AboutSection({ muted, texture, gradient }: AboutSectionProps) {
 
           <Reveal delay={0.2}>
             <div className="mt-8 flex flex-wrap items-center gap-4">
-              <Button as="a" href="/cv.pdf" variant="secondary" download>
+              <Button as="a" href={cvUrl} variant="secondary" download>
                 {t('about.download_cv')}
               </Button>
 
@@ -128,9 +130,7 @@ export function AboutSection({ muted, texture, gradient }: AboutSectionProps) {
                   className="flex h-8 w-8 items-center justify-center rounded-lg text-neutral-400 transition-colors hover:bg-neutral-100 hover:text-neutral-600 dark:hover:bg-neutral-800 dark:hover:text-neutral-300"
                   aria-label="GitHub"
                 >
-                  <svg width="16" height="16" aria-hidden="true">
-                    <use href="/icons.svg#github-icon" />
-                  </svg>
+                  <GitHubIcon width="16" height="16" />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/iv%C3%A1n-arias-pastor-877754317/"
@@ -139,9 +139,7 @@ export function AboutSection({ muted, texture, gradient }: AboutSectionProps) {
                   className="flex h-8 w-8 items-center justify-center rounded-lg text-neutral-400 transition-colors hover:bg-neutral-100 hover:text-neutral-600 dark:hover:bg-neutral-800 dark:hover:text-neutral-300"
                   aria-label="LinkedIn"
                 >
-                  <svg width="16" height="16" aria-hidden="true">
-                    <use href="/icons.svg#linkedin-icon" />
-                  </svg>
+                  <LinkedInIcon width="16" height="16" />
                 </a>
                 <a
                   href="mailto:ariaspastorivan0@gmail.com"
