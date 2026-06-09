@@ -1,3 +1,13 @@
-export function cn(...classes: (string | boolean | undefined | null)[]) {
-  return classes.filter(Boolean).join(' ')
+type ClassValue = string | boolean | undefined | null | ClassValue[]
+
+export function cn(...classes: ClassValue[]): string {
+  const flat: string[] = []
+  const flatten = (arr: ClassValue[]) => {
+    for (const c of arr) {
+      if (Array.isArray(c)) flatten(c)
+      else if (c) flat.push(String(c))
+    }
+  }
+  flatten(classes)
+  return flat.join(' ')
 }

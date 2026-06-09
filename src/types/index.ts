@@ -4,10 +4,15 @@ export interface Project {
   description: string
   longDescription?: string
   image: string
+  images?: string[]
   tags: string[]
   links: ProjectLink[]
   featured: boolean
   year: number
+  stars?: number
+  forks?: number
+  repo?: string
+  owner?: string
 }
 
 export interface ProjectLink {
