@@ -36,7 +36,14 @@ export function ProjectsSection({ muted }: ProjectsSectionProps) {
         {projects.map((project) => (
           <motion.div key={project.id} variants={staggerItem}>
             <Card hover className="flex flex-col">
-              <div className="mb-4 aspect-video w-full overflow-hidden rounded-lg bg-neutral-100 dark:bg-neutral-800" />
+              <div className="mb-4 aspect-video w-full overflow-hidden rounded-lg bg-neutral-100 dark:bg-neutral-800">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
+              </div>
 
               <h3 className="mb-2 text-lg font-semibold text-neutral-900 dark:text-white">
                 {project.title}
