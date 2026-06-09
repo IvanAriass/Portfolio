@@ -51,6 +51,14 @@ export const projectPlaceholders: Record<string, { from: string; to: string; lab
     { from: '#ea580c', to: '#f59e0b', label: 'Catálogo de productos' },
     { from: '#dc2626', to: '#f97316', label: 'Panel de pedidos' },
   ],
+  vetcare: [
+    { from: '#0ea5e9', to: '#6366f1', label: 'Panel de gestión de pacientes' },
+    { from: '#0284c7', to: '#4f46e5', label: 'Agenda de citas' },
+  ],
+  clima: [
+    { from: '#f59e0b', to: '#f97316', label: 'Consulta del clima actual' },
+    { from: '#3b82f6', to: '#06b6d4', label: 'Pronóstico extendido' },
+  ],
 }
 
 export function getProjectImages(id: string, realImage: string): string[] {

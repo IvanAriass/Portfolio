@@ -31,6 +31,14 @@
       "backend": "Arquitectura Backend",
       "ui": "Diseño de Interfaces"
     },
+    "values_title": "Valores",
+    "values": {
+      "quality": "Código limpio y buenas prácticas",
+      "learning": "Aprendizaje continuo",
+      "solving": "Resolver problemas reales",
+      "collab": "Trabajo en equipo y comunicación"
+    },
+    "contact": "Contacto rápido",
     "download_cv": "Descargar CV"
   },
   "projects": {
@@ -41,7 +49,9 @@
     "descriptions": {
       "voluntapp": "Plataforma de voluntariado que conecta organizaciones con voluntarios. Desarrollada con Spring Boot y Angular, incluye registro de usuarios, panel de administración y gestión de actividades con mapas interactivos.",
       "ecoquest": "Aplicación de escritorio que gamifica la sostenibilidad mediante desafíos ecológicos. Desarrollada en WPF con C# y Spring Boot para el backend, permite completar misiones, ganar puntos y seguir el progreso ambiental.",
-      "kebab": "Sistema integral para la gestión de pedidos de un restaurante de kebab. Construido con Spring Boot y MySQL, ofrece catálogo de productos, carrito de compras y seguimiento de pedidos en tiempo real."
+      "kebab": "Sistema integral para la gestión de pedidos de un restaurante de kebab. Construido con Spring Boot y MySQL, ofrece catálogo de productos, carrito de compras y seguimiento de pedidos en tiempo real.",
+      "vetcare": "Aplicación web moderna para la gestión y seguimiento de pacientes veterinarios. Construida con React, TypeScript, Zustand, React Hook Form y Tailwind CSS, incluye agenda de citas, historial clínico y un panel de administración especializado.",
+      "clima": "Aplicación de consulta meteorológica desarrollada con React y TypeScript que obtiene datos climáticos en tiempo real de la API de OpenWeatherMap para cualquier ciudad del mundo, mostrando temperatura, humedad, velocidad del viento y pronósticos."
     }
   },
   "skills": {

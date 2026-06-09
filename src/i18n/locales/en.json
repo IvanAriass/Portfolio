@@ -31,6 +31,14 @@
       "backend": "Backend Architecture",
       "ui": "Interface Design"
     },
+    "values_title": "Values",
+    "values": {
+      "quality": "Clean code & best practices",
+      "learning": "Continuous learning",
+      "solving": "Solving real-world problems",
+      "collab": "Teamwork & communication"
+    },
+    "contact": "Quick contact",
     "download_cv": "Download CV"
   },
   "projects": {
@@ -41,7 +49,9 @@
     "descriptions": {
       "voluntapp": "Volunteering platform that connects organizations with volunteers. Built with Spring Boot and Angular, it includes user registration, an admin panel, and activity management with interactive maps.",
       "ecoquest": "Desktop application that gamifies sustainability through eco-friendly challenges. Developed with WPF and C#, with a Spring Boot backend, it lets you complete missions, earn points, and track environmental progress.",
-      "kebab": "Complete order management system for a kebab restaurant. Built with Spring Boot and MySQL, it features a product catalog, shopping cart, and real-time order tracking."
+      "kebab": "Complete order management system for a kebab restaurant. Built with Spring Boot and MySQL, it features a product catalog, shopping cart, and real-time order tracking.",
+      "vetcare": "Modern web application for veterinary patient management and tracking. Built with React, TypeScript, Zustand, React Hook Form and Tailwind CSS, it includes appointment scheduling, patient history, and a veterinary-specific management dashboard.",
+      "clima": "Weather search application built with React and TypeScript that fetches real-time weather data from the OpenWeatherMap API for any city worldwide, displaying temperature, humidity, wind speed and forecasts."
     }
   },
   "skills": {
