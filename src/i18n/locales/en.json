@@ -11,6 +11,7 @@
     "greeting": "Hi, I'm",
     "role": "Full Stack Developer",
     "tagline": "Graduated in Web and Multiplatform Application Development",
+    "openToWork": "Open to Work · Alicante, Spain",
     "cta": "View projects",
     "contact": "Get in touch"
   },
@@ -40,7 +41,34 @@
     "title": "Experience",
     "work": "Work",
     "education": "Education",
-    "present": "Present"
+    "present": "Present",
+    "items": {
+      "work-freelance": {
+        "role": "Full Stack Freelance Developer",
+        "company": "Freelance / Self-employed",
+        "description": "Development of complete web applications for small businesses and individual clients. Implementation of frontends with React and TypeScript, backends with Node.js and deployed in cloud environments."
+      },
+      "work-practices-1": {
+        "role": "Backend Developer Intern",
+        "company": "NGRPO",
+        "description": "Professional internship at an IT company. Participation in the development and maintenance of internal web applications, collaboration in agile teams and technical support to users."
+      },
+      "work-practices-2": {
+        "role": "QA Developer Intern",
+        "company": "CONVOTIS IBERIA",
+        "description": "Professional internship at an IT company. Participation in the development and maintenance of internal web applications, collaboration in agile teams and technical support to users."
+      },
+      "edu-daw": {
+        "role": "Web Application Development",
+        "company": "IES DOCTOR BALMIS",
+        "description": "Vocational training focused on modern web application development. Acquisition of skills in frontend, backend, databases and server deployment."
+      },
+      "edu-dam": {
+        "role": "Multiplatform Application Development",
+        "company": "IES DOCTOR BALMIS",
+        "description": "Advanced training in multi-platform application development. Focus on Kotlin for Android, WPF for desktop and cloud services with AWS."
+      }
+    }
   },
   "contact": {
     "title": "Contact",

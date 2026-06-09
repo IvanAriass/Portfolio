@@ -1,8 +1,14 @@
+import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { Section } from '@/components/ui/section'
 import { Button } from '@/components/ui/button'
+import { staggerContainer, staggerItem } from '@/lib/animations'
 
-export function ContactSection() {
+interface ContactSectionProps {
+  muted?: boolean
+}
+
+export function ContactSection({ muted }: ContactSectionProps) {
   const { t } = useTranslation()
 
   return (
@@ -10,14 +16,19 @@ export function ContactSection() {
       id="contact"
       title={t('contact.title')}
       subtitle={t('contact.subtitle')}
+      muted={muted}
     >
       <div className="mx-auto max-w-xl">
-        <form
+        <motion.form
           action="https://formspree.io/f/your-form-id"
           method="POST"
           className="space-y-5"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-50px' }}
         >
-          <div>
+          <motion.div variants={staggerItem}>
             <label
               htmlFor="name"
               className="mb-1 block text-sm font-medium text-neutral-700 dark:text-neutral-300"
@@ -31,9 +42,9 @@ export function ContactSection() {
               required
               className="w-full rounded-lg border border-neutral-300 bg-white px-4 py-2.5 text-sm text-neutral-900 placeholder-neutral-400 transition-colors focus:border-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 dark:border-neutral-700 dark:bg-neutral-900 dark:text-white dark:placeholder-neutral-500"
             />
-          </div>
+          </motion.div>
 
-          <div>
+          <motion.div variants={staggerItem}>
             <label
               htmlFor="email"
               className="mb-1 block text-sm font-medium text-neutral-700 dark:text-neutral-300"
@@ -47,9 +58,9 @@ export function ContactSection() {
               required
               className="w-full rounded-lg border border-neutral-300 bg-white px-4 py-2.5 text-sm text-neutral-900 placeholder-neutral-400 transition-colors focus:border-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 dark:border-neutral-700 dark:bg-neutral-900 dark:text-white dark:placeholder-neutral-500"
             />
-          </div>
+          </motion.div>
 
-          <div>
+          <motion.div variants={staggerItem}>
             <label
               htmlFor="message"
               className="mb-1 block text-sm font-medium text-neutral-700 dark:text-neutral-300"
@@ -63,12 +74,14 @@ export function ContactSection() {
               required
               className="w-full resize-y rounded-lg border border-neutral-300 bg-white px-4 py-2.5 text-sm text-neutral-900 placeholder-neutral-400 transition-colors focus:border-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 dark:border-neutral-700 dark:bg-neutral-900 dark:text-white dark:placeholder-neutral-500"
             />
-          </div>
+          </motion.div>
 
-          <Button type="submit" className="w-full">
-            {t('contact.send')}
-          </Button>
-        </form>
+          <motion.div variants={staggerItem}>
+            <Button type="submit" className="w-full">
+              {t('contact.send')}
+            </Button>
+          </motion.div>
+        </motion.form>
       </div>
     </Section>
   )

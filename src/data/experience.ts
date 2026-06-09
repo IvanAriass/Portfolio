@@ -2,23 +2,39 @@ import type { Experience } from '@/types'
 
 export const experiences: Experience[] = [
   {
-    id: 'edu-daw',
-    role: 'Desarrollo de Aplicaciones Web',
-    company: 'IES DOCTOR BALMIS',
-    description: '',
-    startDate: '2022',
+    id: 'work-freelance',
+    startDate: '2026',
+    endDate: null,
+    technologies: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Docker', 'AWS'],
+    type: 'work',
+  },
+  {
+    id: 'work-practices-1',
+    startDate: '2026',
+    endDate: '2026',
+    technologies: ['.NET', 'Syncfusion', 'C#', 'SQL Server'],
+    type: 'work',
+  },
+  {
+    id: 'work-practices-2',
+    startDate: '2024',
     endDate: '2024',
-    technologies: ['Java', 'JavaScript', 'Typescript', 'HTML/CSS', 'SQL', 'PHP', 'Spring Boot', 'Docker'],
-    type: 'education',
+    technologies: ['Java', 'Selenium', 'SerenityBDD', 'Trello', "Pruebas de Caja Blanca", "Pruebas de Caja Negra"],
+    type: 'work',
   },
   {
     id: 'edu-dam',
-    role: 'Desarrollo de Aplicaciones Multiplataforma',
-    company: 'IES DOCTOR BALMIS',
-    description: '',
     startDate: '2024',
     endDate: '2026',
     technologies: ['Kotlin', 'Java', 'WPF', 'AWS', 'MongoDB'],
     type: 'education',
   },
+  {
+    id: 'edu-daw',
+    startDate: '2022',
+    endDate: '2024',
+    technologies: ['Java', 'JavaScript', 'TypeScript', 'HTML/CSS', 'SQL', 'PHP', 'Spring Boot', 'Docker'],
+    type: 'education',
+  },
+  
 ]

@@ -11,6 +11,7 @@
     "greeting": "Hola, soy",
     "role": "Desarrollador Full Stack",
     "tagline": "Graduado en Desarrollo de Aplicaciones Web y Multiplataforma",
+    "openToWork": "Open to Work · Alicante, España",
     "cta": "Ver proyectos",
     "contact": "Contactar"
   },
@@ -40,7 +41,34 @@
     "title": "Experiencia",
     "work": "Trabajo",
     "education": "Educación",
-    "present": "Actualidad"
+    "present": "Actualidad",
+    "items": {
+      "work-freelance": {
+        "role": "Desarrollador Full Stack Freelance",
+        "company": "Freelance / Autónomo",
+        "description": "Desarrollo de aplicaciones web completas para pequeños negocios y clientes particulares. Implementación de frontends con React y TypeScript, backends con Node.js y desplegados en entornos cloud."
+      },
+      "work-practices-1": {
+        "role": "Desarrollador Backend en Prácticas",
+        "company": "NGPRO",
+        "description": "Prácticas profesionales en empresa del sector TI. Participación en el desarrollo y mantenimiento de aplicaciones web internas, colaboración en equipos ágiles y soporte técnico a usuarios."
+      },
+      "work-practices-2": {
+        "role": "Desarrollador QA en Prácticas",
+        "company": "CONVOTIS IBERIA",
+        "description": "Prácticas profesionales en empresa del sector TI. Participación en el desarrollo y mantenimiento de aplicaciones web internas, colaboración en equipos ágiles y soporte técnico a usuarios."
+      },
+      "edu-daw": {
+        "role": "Desarrollo de Aplicaciones Web",
+        "company": "IES DOCTOR BALMIS",
+        "description": "Formación profesional centrada en el desarrollo de aplicaciones web modernas. Adquisición de competencias en frontend, backend, bases de datos y despliegue en servidores."
+      },
+      "edu-dam": {
+        "role": "Desarrollo de Aplicaciones Multiplataforma",
+        "company": "IES DOCTOR BALMIS",
+        "description": "Formación avanzada en desarrollo de aplicaciones para múltiples plataformas. Enfoque en kotlin para Android, WPF para escritorio y servicios cloud con AWS."
+      }
+    }
   },
   "contact": {
     "title": "Contacto",

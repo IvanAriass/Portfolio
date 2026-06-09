@@ -1,16 +1,22 @@
+import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { Section } from '@/components/ui/section'
 import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+import { staggerContainer, staggerItem } from '@/lib/animations'
 import { projects } from '@/data/projects'
 
-export function ProjectsSection() {
+interface ProjectsSectionProps {
+  muted?: boolean
+}
+
+export function ProjectsSection({ muted }: ProjectsSectionProps) {
   const { t } = useTranslation()
 
   if (projects.length === 0) {
     return (
-      <Section id="projects" title={t('projects.title')}>
+      <Section id="projects" title={t('projects.title')} muted={muted}>
         <p className="text-center text-neutral-500 dark:text-neutral-400">
           {t('projects.no_projects')}
         </p>
@@ -19,46 +25,61 @@ export function ProjectsSection() {
   }
 
   return (
-    <Section id="projects" title={t('projects.title')}>
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <Section id="projects" title={t('projects.title')} muted={muted}>
+      <motion.div
+        className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: '-50px' }}
+      >
         {projects.map((project) => (
-          <Card key={project.id} hover className="flex flex-col">
-            <div className="mb-4 aspect-video w-full overflow-hidden rounded-lg bg-neutral-100 dark:bg-neutral-800" />
+          <motion.div key={project.id} variants={staggerItem}>
+            <Card hover className="flex flex-col">
+              <div className="mb-4 aspect-video w-full overflow-hidden rounded-lg bg-neutral-100 dark:bg-neutral-800">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
+              </div>
 
-            <h3 className="mb-2 text-lg font-semibold text-neutral-900 dark:text-white">
-              {project.title}
-            </h3>
+              <h3 className="mb-2 text-lg font-semibold text-neutral-900 dark:text-white">
+                {project.title}
+              </h3>
 
-            {project.description && (
-              <p className="mb-4 flex-1 text-sm text-neutral-500 dark:text-neutral-400">
-                {project.description}
-              </p>
-            )}
+              {project.description && (
+                <p className="mb-4 flex-1 text-sm text-neutral-500 dark:text-neutral-400">
+                  {project.description}
+                </p>
+              )}
 
-            <div className="mb-4 flex flex-wrap gap-1.5">
-              {project.tags.map((tag) => (
-                <Badge key={tag}>{tag}</Badge>
-              ))}
-            </div>
+              <div className="mb-4 flex flex-wrap gap-1.5">
+                {project.tags.map((tag) => (
+                  <Badge key={tag}>{tag}</Badge>
+                ))}
+              </div>
 
-            <div className="flex gap-2">
-              {project.links.map((link) => (
-                <Button
-                  key={link.url}
-                  as="a"
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  variant="secondary"
-                  size="sm"
-                >
-                  {link.label}
-                </Button>
-              ))}
-            </div>
-          </Card>
+              <div className="flex gap-2">
+                {project.links.map((link) => (
+                  <Button
+                    key={link.url}
+                    as="a"
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    variant="secondary"
+                    size="sm"
+                  >
+                    {link.label}
+                  </Button>
+                ))}
+              </div>
+            </Card>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </Section>
   )
 }

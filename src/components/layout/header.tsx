@@ -1,3 +1,5 @@
+import { useMemo } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
 import { useTheme } from '@/contexts/theme-context'
 import { useScrollSpy } from '@/hooks/use-scroll-spy'
 import { cn } from '@/lib/utils'
@@ -14,7 +16,8 @@ const NAV_ITEMS = [
 
 export function Header() {
   const { t, i18n } = useTranslation()
-  const activeId = useScrollSpy(NAV_ITEMS.map((item) => item.id), 80)
+  const sectionIds = useMemo(() => NAV_ITEMS.map((item) => item.href.slice(1)), [])
+  const activeId = useScrollSpy(sectionIds, 80)
   const { theme, toggleTheme } = useTheme()
 
   const toggleLanguage = () => {
@@ -38,8 +41,8 @@ export function Header() {
               <a
                 href={item.href}
                 className={cn(
-                  'rounded-lg px-3 py-2 text-sm font-medium transition-colors',
-                  activeId === item.id
+                  'rounded-lg px-3 py-2 text-sm font-medium transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800',
+                  activeId === item.href.slice(1)
                     ? 'text-neutral-900 dark:text-white'
                     : 'text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white',
                 )}
@@ -63,10 +66,21 @@ export function Header() {
           <button
             type="button"
             onClick={toggleTheme}
-            className="rounded-lg p-2 text-neutral-500 transition-colors hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white"
+            className="rounded-lg p-2 text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white"
             aria-label={t(theme === 'dark' ? 'theme.light' : 'theme.dark')}
           >
-            {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
+            <AnimatePresence mode="wait" initial={false}>
+              <motion.span
+                key={theme}
+                initial={{ rotate: -90, opacity: 0, scale: 0.5 }}
+                animate={{ rotate: 0, opacity: 1, scale: 1 }}
+                exit={{ rotate: 90, opacity: 0, scale: 0.5 }}
+                transition={{ duration: 0.3, ease: 'easeInOut' }}
+                className="flex"
+              >
+                {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
+              </motion.span>
+            </AnimatePresence>
           </button>
         </div>
       </nav>

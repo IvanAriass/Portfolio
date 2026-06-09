@@ -11,9 +11,9 @@ function App() {
     <Layout>
       <HeroSection />
       <AboutSection />
-      <ProjectsSection />
+      <ProjectsSection muted />
       <SkillsSection />
-      <ExperienceSection />
+      <ExperienceSection muted />
       <ContactSection />
     </Layout>
   )

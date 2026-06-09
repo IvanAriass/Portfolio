@@ -1,8 +1,10 @@
+import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { Section } from '@/components/ui/section'
 import { skills } from '@/data/skills'
 import type { SkillCategory } from '@/types'
 import { cn } from '@/lib/utils'
+import { staggerContainer, staggerItem } from '@/lib/animations'
 
 const CATEGORY_ORDER: SkillCategory[] = [
   'frontend',
@@ -13,7 +15,11 @@ const CATEGORY_ORDER: SkillCategory[] = [
   'languages',
 ]
 
-export function SkillsSection() {
+interface SkillsSectionProps {
+  muted?: boolean
+}
+
+export function SkillsSection({ muted }: SkillsSectionProps) {
   const { t } = useTranslation()
 
   const grouped = CATEGORY_ORDER.map((category) => ({
@@ -23,10 +29,16 @@ export function SkillsSection() {
   })).filter((g) => g.items.length > 0)
 
   return (
-    <Section id="skills" title={t('skills.title')}>
-      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    <Section id="skills" title={t('skills.title')} muted={muted}>
+      <motion.div
+        className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: '-50px' }}
+      >
         {grouped.map((group) => (
-          <div key={group.category}>
+          <motion.div key={group.category} variants={staggerItem}>
             <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
               {group.label}
             </h3>
@@ -41,22 +53,25 @@ export function SkillsSection() {
                     <span className="text-xs text-neutral-400">{skill.level}/5</span>
                   </div>
                   <div className="h-1.5 w-full overflow-hidden rounded-full bg-neutral-100 dark:bg-neutral-800">
-                    <div
+                    <motion.div
                       className={cn(
-                        'h-full rounded-full transition-all duration-500',
+                        'h-full rounded-full',
                         skill.level >= 4
                           ? 'bg-neutral-800 dark:bg-white'
                           : 'bg-neutral-400 dark:bg-neutral-500',
                       )}
-                      style={{ width: `${(skill.level / 5) * 100}%` }}
+                      initial={{ width: 0 }}
+                      whileInView={{ width: `${(skill.level / 5) * 100}%` }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
                     />
                   </div>
                 </div>
               ))}
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </Section>
   )
 }
