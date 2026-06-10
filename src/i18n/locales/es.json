@@ -79,7 +79,7 @@
       "work-practices-1": {
         "role": "Desarrollador Backend en Prácticas",
         "company": "NGPRO",
-        "description": "Prácticas profesionales en empresa del sector TI. Participación en el desarrollo y mantenimiento de aplicaciones web internas, colaboración en equipos ágiles y soporte técnico a usuarios."
+        "description": "Desarrollo de un ERP corporativo utilizando WPF y Syncfusion. Participación en el diseño e implementación de módulos funcionales, integración con bases de datos SQL Server y colaboración en equipos ágiles."
       },
       "work-practices-2": {
         "role": "Desarrollador QA en Prácticas",
@@ -95,6 +95,11 @@
         "role": "Desarrollo de Aplicaciones Multiplataforma",
         "company": "IES DOCTOR BALMIS",
         "description": "Formación avanzada en desarrollo de aplicaciones para múltiples plataformas. Enfoque en kotlin para Android, WPF para escritorio y servicios cloud con AWS."
+      },
+      "bachiller": {
+        "role": "Bachillerato Científico",
+        "company": "IES JAIME II",
+        "description": "Bachillerato en la rama de ciencias, con formación en matemáticas, física, química y biología. Base analítica y de resolución de problemas aplicada al desarrollo de software."
       }
     }
   },
