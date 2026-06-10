@@ -45,12 +45,12 @@ export const projects: Project[] = [
     images: getProjectImages('ecoquest', ecoquestImg),
     tags: ['WPF', 'C#', 'Spring Boot', 'Java', 'MySQL', 'Figma'],
     links: [
-      { label: 'Código', url: 'https://github.com/Prompt-pi2damiesbalmis/PROYECTOI2', type: 'github' },
+      { label: 'Código', url: 'https://github.com/IvanAriass/EcoQuest', type: 'github' },
     ],
     featured: true,
     year: 2026,
     stars: 1,
-    repo: 'Prompt-pi2damiesbalmis/PROYECTOI2',
+    repo: 'IvanAriass/EcoQuest',
   },
   {
     id: 'clima',
