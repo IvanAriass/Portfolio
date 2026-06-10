@@ -60,7 +60,7 @@
       "frontend": "Frontend",
       "backend": "Backend",
       "database": "Bases de Datos",
-      "devops": "DevOps",
+      "cloud": "Servicios Cloud",
       "tools": "Herramientas",
       "languages": "Lenguajes"
     }
@@ -71,10 +71,10 @@
     "education": "Educación",
     "present": "Actualidad",
     "items": {
-      "work-freelance": {
-        "role": "Desarrollador Full Stack Freelance",
-        "company": "Freelance / Autónomo",
-        "description": "Desarrollo de aplicaciones web completas para pequeños negocios y clientes particulares. Implementación de frontends con React y TypeScript, backends con Node.js y desplegados en entornos cloud."
+      "self-learning": {
+        "role": "Formación Continua y Proyectos Propios",
+        "company": "Proyectos Personales",
+        "description": "Actualmente continúo formándome de forma autodidacta mientras desarrollo proyectos propios que abarcan desde aplicaciones web full stack con React, TypeScript y Node.js hasta aplicaciones de escritorio con WPF y desarrollo móvil con Kotlin. Despliego en entornos cloud y exploro nuevas tecnologías para seguir creciendo como desarrollador."
       },
       "work-practices-1": {
         "role": "Desarrollador Backend en Prácticas",

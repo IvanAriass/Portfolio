@@ -33,7 +33,7 @@ export type SkillCategory =
   | 'frontend'
   | 'backend'
   | 'database'
-  | 'devops'
+  | 'cloud'
   | 'tools'
   | 'languages'
 

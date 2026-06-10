@@ -2,10 +2,10 @@ import type { Experience } from '@/types'
 
 export const experiences: Experience[] = [
   {
-    id: 'work-freelance',
+    id: 'self-learning',
     startDate: '2026',
     endDate: null,
-    technologies: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Docker', 'AWS'],
+    technologies: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Docker', 'AWS', 'Kotlin', 'WPF'],
     type: 'work',
   },
   {
