@@ -28,5 +28,5 @@ export const skills: Skill[] = [
   { id: 'github-projects', name: 'GitHub Projects', category: 'tools', level: 4 },
   { id: 'obsidian', name: 'Obsidian', category: 'tools', level: 4 },
   { id: 'csharp', name: 'C#', category: 'languages', level: 3 },
-  { id: 'wpf', name: 'WPF', category: 'frontend', level: 3 },
+  { id: 'wpf', name: 'WPF', category: 'frontend', level: 4 },
 ]
