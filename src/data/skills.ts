@@ -26,7 +26,7 @@ export const skills: Skill[] = [
   { id: 'figma', name: 'Figma', category: 'tools', level: 3 },
   { id: 'trello', name: 'Trello', category: 'tools', level: 3 },
   { id: 'github-projects', name: 'GitHub Projects', category: 'tools', level: 4 },
-  { id: 'obsidian', name: 'Obsidian', category: 'tools', level: 3 },
+  { id: 'obsidian', name: 'Obsidian', category: 'tools', level: 4 },
   { id: 'csharp', name: 'C#', category: 'languages', level: 3 },
   { id: 'wpf', name: 'WPF', category: 'frontend', level: 3 },
 ]
