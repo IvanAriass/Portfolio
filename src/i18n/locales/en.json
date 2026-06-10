@@ -78,8 +78,8 @@
       },
       "work-practices-1": {
         "role": "Backend Developer Intern",
-        "company": "NGRPO",
-        "description": "Professional internship at an IT company. Participation in the development and maintenance of internal web applications, collaboration in agile teams and technical support to users."
+        "company": "NGPRO",
+        "description": "Development of a corporate ERP using WPF and Syncfusion. Participation in the design and implementation of functional modules, integration with SQL Server databases, and collaboration in agile teams."
       },
       "work-practices-2": {
         "role": "QA Developer Intern",
@@ -95,6 +95,11 @@
         "role": "Multiplatform Application Development",
         "company": "IES DOCTOR BALMIS",
         "description": "Advanced training in multi-platform application development. Focus on Kotlin for Android, WPF for desktop and cloud services with AWS."
+      },
+      "bachiller": {
+        "role": "Scientific Baccalaureate",
+        "company": "IES JAIME II",
+        "description": "Baccalaureate in the science branch, with training in mathematics, physics, chemistry and biology. Analytical and problem-solving foundation applied to software development."
       }
     }
   },

@@ -4,7 +4,7 @@ import { ThemeProvider } from '@/providers/theme-provider'
 import App from './App'
 import './i18n'
 import './styles/globals.css'
-import faviconHref from '@/assets/favicon.svg?url'
+import faviconHref from '@/assets/icon.svg?url'
 
 const faviconEl = document.querySelector<HTMLLinkElement>('link[rel="icon"]')
 if (faviconEl) faviconEl.href = faviconHref

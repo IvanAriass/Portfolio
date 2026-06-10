@@ -36,5 +36,11 @@ export const experiences: Experience[] = [
     technologies: ['Java', 'JavaScript', 'TypeScript', 'HTML/CSS', 'SQL', 'PHP', 'Spring Boot', 'Docker'],
     type: 'education',
   },
-  
+  {
+    id: 'bachiller',
+    startDate: '2020',
+    endDate: '2022',
+    technologies: [],
+    type: 'education',
+  },
 ]

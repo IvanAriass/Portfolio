@@ -12,6 +12,7 @@ export const skills: Skill[] = [
   { id: 'node', name: 'Node.js', category: 'backend', level: 3 },
   { id: 'express', name: 'Express', category: 'backend', level: 3 },
   { id: 'java', name: 'Java', category: 'languages', level: 4 },
+  { id: 'kotlin', name: 'Kotlin', category: 'languages', level: 3 },
   { id: 'sql', name: 'SQL', category: 'database', level: 3 },
   { id: 'mongodb', name: 'MongoDB', category: 'database', level: 2 },
   { id: 'git', name: 'Git', category: 'tools', level: 4 },
@@ -22,4 +23,10 @@ export const skills: Skill[] = [
   { id: 'mysql', name: 'MySQL', category: 'database', level: 3 },
   { id: 'azure', name: 'Azure', category: 'devops', level: 2 },
   { id: 'ionic', name: 'Ionic', category: 'frontend', level: 3 },
+  { id: 'figma', name: 'Figma', category: 'tools', level: 3 },
+  { id: 'trello', name: 'Trello', category: 'tools', level: 3 },
+  { id: 'github-projects', name: 'GitHub Projects', category: 'tools', level: 4 },
+  { id: 'obsidian', name: 'Obsidian', category: 'tools', level: 4 },
+  { id: 'csharp', name: 'C#', category: 'languages', level: 3 },
+  { id: 'wpf', name: 'WPF', category: 'frontend', level: 3 },
 ]

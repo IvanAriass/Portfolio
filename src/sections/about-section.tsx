@@ -8,6 +8,7 @@ import cvUrl from '@/assets/cv.pdf?url'
 import { useTranslation } from 'react-i18next'
 import { staggerContainer, staggerItem } from '@/lib/animations'
 import { skills } from '@/data/skills'
+import { projects } from '@/data/projects'
 import type { Texture, Gradient } from '@/components/ui/section'
 
 interface AboutSectionProps {
@@ -165,8 +166,8 @@ export function AboutSection({ muted, texture, gradient }: AboutSectionProps) {
           <div className="grid grid-cols-2 gap-3">
             {[
               { key: 'experience', value: '2', suffix: '+' },
-              { key: 'projects', value: '3', suffix: '' },
-              { key: 'technologies', value: '21', suffix: '' },
+              { key: 'projects', value: String(projects.length), suffix: '' },
+              { key: 'technologies', value: String(skills.length), suffix: '' },
             ].map((h, i) => (
               <HighlightCard
                 key={h.key}
