@@ -1,8 +1,10 @@
+import { useState, type FormEvent, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { Section } from '@/components/ui/section'
 import { Button } from '@/components/ui/button'
 import { staggerContainer, staggerItem } from '@/lib/animations'
+import { useToastStore } from '@/lib/toast-store'
 import type { Texture, Gradient } from '@/components/ui/section'
 
 interface ContactSectionProps {
@@ -13,6 +15,38 @@ interface ContactSectionProps {
 
 export function ContactSection({ muted, texture, gradient }: ContactSectionProps) {
   const { t } = useTranslation()
+  const addToast = useToastStore((s) => s.addToast)
+  const [sending, setSending] = useState(false)
+  const formRef = useRef<HTMLFormElement>(null)
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    if (!formRef.current) return
+
+    setSending(true)
+
+    try {
+      const form = formRef.current
+      const data = new FormData(form)
+
+      const response = await fetch('https://formspree.io/f/mojzlzpk', {
+        method: 'POST',
+        body: data,
+        headers: { Accept: 'application/json' },
+      })
+
+      if (response.ok) {
+        addToast('success', t('contact.success'))
+        form.reset()
+      } else {
+        addToast('error', t('contact.error'))
+      }
+    } catch {
+      addToast('error', t('contact.error'))
+    } finally {
+      setSending(false)
+    }
+  }
 
   return (
     <Section
@@ -25,8 +59,8 @@ export function ContactSection({ muted, texture, gradient }: ContactSectionProps
     >
       <div className="mx-auto max-w-xl">
         <motion.form
-          action="https://formspree.io/f/your-form-id"
-          method="POST"
+          ref={formRef}
+          onSubmit={handleSubmit}
           className="space-y-5"
           variants={staggerContainer}
           initial="hidden"
@@ -82,8 +116,8 @@ export function ContactSection({ muted, texture, gradient }: ContactSectionProps
           </motion.div>
 
           <motion.div variants={staggerItem}>
-            <Button type="submit" className="w-full">
-              {t('contact.send')}
+            <Button type="submit" className="w-full" disabled={sending}>
+              {sending ? t('contact.sending') : t('contact.send')}
             </Button>
           </motion.div>
         </motion.form>

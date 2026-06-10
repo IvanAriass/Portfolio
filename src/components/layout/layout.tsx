@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import { Header } from './header'
 import { Footer } from './footer'
+import { ToastContainer } from '@/components/ui/toast'
 
 interface LayoutProps {
   children: ReactNode
@@ -12,6 +13,7 @@ export function Layout({ children }: LayoutProps) {
       <Header />
       <main className="pt-16">{children}</main>
       <Footer />
+      <ToastContainer />
     </div>
   )
 }
