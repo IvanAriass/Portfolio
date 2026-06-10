@@ -11,7 +11,7 @@ const CATEGORY_ORDER: SkillCategory[] = [
   'frontend',
   'backend',
   'database',
-  'devops',
+  'cloud',
   'tools',
   'languages',
 ]
